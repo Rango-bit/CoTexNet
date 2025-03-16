@@ -85,3 +85,10 @@ python data_process/make_ROI_img.py \
 - LLaVA-1.5 (`llava`: used to get textual attribute descriptions from ROIs)
 - CLIPSeg(`clipseg`: model backbone)
 
+### Generate Text
+Using (LLaVA model + ROI images) to generate text for each dataset:
+```bash
+python get_text.py \
+    --dataset-name kvasir \
+    --model-path ./llava_inference/llava-v1.5-13b
+```
