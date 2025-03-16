@@ -37,6 +37,9 @@ conda activate vlsm
 pip install -r requirements.txt
 ```
 
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
+
 ### Datasets Links
 | Dataset  | Download | Dataset  | Download 
 |-------|-------|-------|-------|
@@ -45,6 +48,35 @@ pip install -r requirements.txt
 | CLinicDB | [Download](https://polyp.grand-challenge.org/CVCClinicDB/) |GLaS|[Download](https://paperswithcode.com/dataset/glas) |
 | BUSI | [Download](https://scholar.cu.edu.eg/?q=afahmy/pages/dataset) |CAMUS|[Download](https://www.creatis.insa-lyon.fr/Challenge/camus/databases.html) |
 | DDTI | [Download](http://cimalab.unal.edu.co/?lang=en&mod=project&id=31)  |ACDC|[Download](https://www.creatis.insa-lyon.fr/Challenge/acdc/databases.html) |
+
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
+
+### Dataset Preparation
+
+Please prepare the dataset in the following format to facilitate the use of the code:
+
+```angular2html
+├── data_process
+   ├── kvasir
+   │   ├── images
+   |   |   
+   │   ├── masks
+   |   | 
+   │   └── ROIs
+   |  
+   └── clinicdb
+       ├── images
+       ......
+```
+
+Using mask labels to cover the original images to get the ROI images:
+```bash
+python data_process/make_ROI_img.py \
+    --dataset-name kvasir \
+    --model-path kvasir \
+    --img-format .jpg \ # Image Storage Format
+```
 
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
