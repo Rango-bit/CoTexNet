@@ -104,3 +104,8 @@ Adjust the path and other hyperparameters in the `dataset_config/train_config.ya
 ```bash
 python train.py
 ```
+At the end of training, the model is automatically loaded with the best parameters selected based on validation results and evaluated on the test set.
+
+## 📝 Notes
++ In the above "Generate Text", the code defaults to using GPUs 0 and 1 for inference (see the `os.environ['CUDA_VISIBLE_DEVICES']` parameter in `llava_vqa_13.py` for more details). Ensure that the total available GPU memory exceeds 28GB.
++ For the parameter `num_classes` in `dataset_config/train_config.yaml`, set `num_classes` to 1 for single-category segmentation tasks. In this case, the CLIPSeg model can fully utilize the pre-trained parameters. For multi-category segmentation, `num_classes` should be the number of categories plus one (with the background as a separate category). For example, in the CAMUS dataset, `num_classes` is 4.
