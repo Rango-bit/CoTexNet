@@ -100,6 +100,9 @@ python get_text.py \
     --model-path ./llava_inference/llava-v1.5-13b
 ```
 
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
+
 ## Training
 
 Adjust the path and other hyperparameters in the `dataset_config/train_config.yaml` files before run the code.
@@ -117,3 +120,6 @@ At the end of training, the model is automatically loaded with the best paramete
 ## 📄 LICENSE
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
