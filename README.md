@@ -61,10 +61,8 @@ Please prepare the dataset in the following format to facilitate the use of the 
 ├── data_process
    ├── kvasir
    │   ├── images
-   |   |   
-   │   ├── masks
    |   | 
-   │   └── ROIs
+   │   └── masks
    |  
    └── clinicdb
        ├── images
