@@ -111,7 +111,7 @@ Using (LLaVA model + ROI images) to generate text for each dataset:
 ```bash
 conda activate llava
 
-python get_text.py \
+python llava_inference/get_text.py \
     --dataset-name kvasir \
     --model-path ./llava_inference/llava-v1.5-13b
 ```
@@ -132,7 +132,7 @@ At the end of training, the model is automatically loaded with the best paramete
 
 ## 📝 Notes
 
-+ In the above "Generate Text", the code defaults to using GPUs 0 and 1 for inference (see the `os.environ['CUDA_VISIBLE_DEVICES']` parameter in `llava_vqa_13.py` for more details). Ensure that the total available GPU memory exceeds 28GB.
++ In the above "Generate Text", the code defaults to using GPUs 0 and 1 for inference (see the `os.environ['CUDA_VISIBLE_DEVICES']` parameter in `llava_vqa_13.py` for more details). Ensure that the total available GPU memory exceeds 30GB.
 + For the parameter `num_classes` in `dataset_config/train_config.yaml`, `num_classes` should be the number of categories plus one (with the background as a separate category). For example, in the CAMUS dataset (3 classes), `num_classes` is 4.
 
 ## 📄 LICENSE
