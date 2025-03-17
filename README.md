@@ -17,7 +17,7 @@
 
 ## 📋 Overview
 
-This repository contains a official implementation implementation of our research paper “Learning conceptual textual prompts from visual regions of interest for medical image segmentation”. Our approach utilizes learning conceptual text from ROI images to assist the VLSM model for visual segmentation.
+🌈This repository contains a official implementation implementation of our research paper “Learning conceptual textual prompts from visual regions of interest for medical image segmentation”. Our approach utilizes learning conceptual text from ROI images to assist the VLSM model for visual segmentation.
 
 ## Framework
 
@@ -77,13 +77,18 @@ python data_process/make_ROI_img.py \
     --model-path kvasir \
     --img-format .jpg \ # Image Storage Format
 ```
+For multi-category segmentation, please save each category label as a separate mask for each image and use the above code to make ROI images for it with corresponding number of categories.
 
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
 
 ### Models
 - LLaVA-1.5 (`llava`: used to get textual attribute descriptions from ROIs)
+
+  Since it is required to use the LLaVA model to perform inference on each ROI image, we strongly recommend localized deployment of the LLaVA model. Please [download](https://huggingface.co/liuhaotian/llava-v1.5-13b) the pre-training parameters and configuration files for the LLaVA model and place them in the `llava_inference/llava-v1.5-13b` folder.
 - CLIPSeg(`clipseg`: model backbone)
+
+  The pre-training parameters and files for the CLIPSeg model are automatically downloaded when running the segmentation code below. Alternatively, you can manually download and place them in the `model/pretrained` folder and then modify the `clipg_hf_api` parameter in `model/CoTexNet.py`.
 
 ### Generate Text
 Using (LLaVA model + ROI images) to generate text for each dataset:
@@ -91,4 +96,11 @@ Using (LLaVA model + ROI images) to generate text for each dataset:
 python get_text.py \
     --dataset-name kvasir \
     --model-path ./llava_inference/llava-v1.5-13b
+```
+
+## Training
+Adjust the path and other hyperparameters in the `dataset_config/train_config.yaml` files before run the code.
+
+```bash
+python train.py
 ```
