@@ -114,6 +114,6 @@ At the end of training, the model is automatically loaded with the best paramete
 + In the above "Generate Text", the code defaults to using GPUs 0 and 1 for inference (see the `os.environ['CUDA_VISIBLE_DEVICES']` parameter in `llava_vqa_13.py` for more details). Ensure that the total available GPU memory exceeds 28GB.
 + For the parameter `num_classes` in `dataset_config/train_config.yaml`, `num_classes` should be the number of categories plus one (with the background as a separate category). For example, in the CAMUS dataset, `num_classes` is 4.
 
-## LICENSE
+## 📄 LICENSE
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
