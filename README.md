@@ -34,7 +34,7 @@ conda create -n vlsm python=3.10
 conda activate vlsm
 
 # Install dependencies
-pip install -r requirement.txt
+pip install -r requirements.txt
 
 # Create and activate llava environment
 conda create -n llava python=3.10
