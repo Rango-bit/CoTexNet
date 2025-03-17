@@ -35,6 +35,17 @@ conda activate vlsm
 
 # Install dependencies
 pip install -r requirement.txt
+
+# Create and activate llava environment
+conda create -n llava python=3.10
+conda activate llava
+
+git clone git@github.com:haotian-liu/LLaVA.git
+cd LLaVA
+
+# Install dependencies
+pip install --upgrade pip
+pip install -e .
 ```
 Refer to [pytorch.org](https://pytorch.org/) when installing torch packages.
 
@@ -73,6 +84,8 @@ The image names and their corresponding mask names for the training, validation,
 
 Using mask labels to cover the original images to get the ROI images:
 ```bash
+conda activate vlsm
+
 python data_process/make_ROI_img.py \
     --dataset-name kvasir \
     --dataset-path data_process/kvasir \
@@ -96,6 +109,8 @@ For multi-category segmentation, please save each category label as a separate m
 
 Using (LLaVA model + ROI images) to generate text for each dataset:
 ```bash
+conda activate llava
+
 python get_text.py \
     --dataset-name kvasir \
     --model-path ./llava_inference/llava-v1.5-13b
@@ -109,6 +124,8 @@ python get_text.py \
 Adjust the path and other hyperparameters in the `dataset_config/train_config.yaml` files before run the code.
 
 ```bash
+conda activate vlsm
+
 python train.py
 ```
 At the end of training, the model is automatically loaded with the best parameters selected based on validation results and evaluated on the test set.
