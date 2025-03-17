@@ -77,7 +77,7 @@ Using mask labels to cover the original images to get the ROI images:
 ```bash
 python data_process/make_ROI_img.py \
     --dataset-name kvasir \
-    --model-path kvasir \
+    --dataset-path data_process/kvasir \
     --img-format .jpg \ # Image Storage Format
 ```
 For multi-category segmentation, please save each category label as a separate mask for each image and use the above code to make ROI images for it with corresponding number of categories.
