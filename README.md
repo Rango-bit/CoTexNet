@@ -34,7 +34,7 @@ conda create -n vlsm python=3.10
 conda activate vlsm
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
