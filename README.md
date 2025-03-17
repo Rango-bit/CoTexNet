@@ -70,6 +70,7 @@ Please prepare the dataset in the following format to facilitate the use of the 
        ├── images
        ......
 ```
+
 The image names and their corresponding mask names for the training, validation, and test sets are stored in `train_data.csv`, `val_data.csv`, and `test_data.csv`, respectively, within the `data_process` folder.
 
 Using mask labels to cover the original images to get the ROI images:
