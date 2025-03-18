@@ -80,7 +80,7 @@ Please prepare the dataset in the following format to facilitate the use of the 
        ......
 ```
 
-The image names and their corresponding mask names for the training, validation, and test sets are stored in `train_data.csv`, `val_data.csv`, and `test_data.csv`, respectively, within the `data_process` folder.
+> 🔔 The image names and their corresponding mask names for the training, validation, and test sets are stored in `train_data.csv`, `val_data.csv`, and `test_data.csv`, respectively, within the `data_process` folder.
 
 Using mask labels to cover the original images to get the ROI images:
 ```bash
@@ -100,10 +100,10 @@ python data_process/make_ROI_img.py \
 
 - LLaVA-1.5 (`llava`: used to get textual attribute descriptions from ROIs)
 
-  Since it is required to use the LLaVA model to perform inference on each ROI image, we strongly recommend localized deployment of the LLaVA model. Please [download](https://huggingface.co/liuhaotian/llava-v1.5-13b) the pre-training parameters and configuration files for the LLaVA model and place them in the `llava_inference/llava-v1.5-13b` folder.
+  Since it is required to use the LLaVA model to perform inference on each ROI image, we strongly recommend localized deployment of the LLaVA model. Please [download🤗](https://huggingface.co/liuhaotian/llava-v1.5-13b) the pre-training parameters and configuration files for the LLaVA model and place them in the `llava_inference/llava-v1.5-13b` folder.
 - CLIPSeg(`clipseg`: model backbone)
 
-  The pre-training parameters and files for the CLIPSeg model are automatically downloaded when running the segmentation code below. Alternatively, you can manually [download](https://huggingface.co/CIDAS/clipseg-rd64-refined/tree/main) and place them in the `model/pretrained` folder and then modify the `clipg_hf_api` parameter in `model/CoTexNet.py`.
+  The pre-training parameters and files for the CLIPSeg model are automatically downloaded when running the segmentation code below. Alternatively, you can manually [download🤗](https://huggingface.co/CIDAS/clipseg-rd64-refined/tree/main) and place them in the `model/pretrained` folder and then modify the `clipg_hf_api` parameter in `model/CoTexNet.py`.
 
 ### Generate Text
 
