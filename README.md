@@ -120,7 +120,7 @@ python llava_inference/get_text.py \
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
 
-## Training
+## 🚀 Training
 
 Adjust the path and other hyperparameters in the `dataset_config/train_config.yaml` files before run the code.
 
@@ -138,6 +138,7 @@ python train.py
 
 ## 📄 LICENSE
 
+![Static Badge](https://img.shields.io/badge/Code_Lincense-MIT_lincense-green)
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
