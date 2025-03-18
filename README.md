@@ -17,7 +17,7 @@
 
 ## 📋 Overview
 
-🌈This repository contains a official implementation implementation of our research paper “Learning conceptual textual prompts from visual regions of interest for medical image segmentation”. Our approach utilizes learning conceptual text from ROI images to assist the VLSM model for visual segmentation.
+🌈This repository contains a official implementation implementation of our research paper “Learning conceptual textual prompts from visual regions of interest for medical image segmentation”. Our approach learn conceptual text prompts directly from visual regions of interest (ROIs) to facilitate medical image segmentation. This repository provides the detailed implementation of applying our methods on multiple datasets.
 
 ## Framework
 
@@ -47,7 +47,7 @@ cd LLaVA
 pip install --upgrade pip
 pip install -e .
 ```
-Refer to [pytorch.org](https://pytorch.org/) when installing torch packages.
+> 🔔 Refer to [pytorch.org](https://pytorch.org/) when installing torch packages.
 
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
@@ -91,7 +91,7 @@ python data_process/make_ROI_img.py \
     --dataset-path data_process/kvasir \
     --img-format .jpg \ # Image Storage Format
 ```
-For multi-category segmentation, please save each category label as a separate mask for each image and use the above code to make ROI images for it with corresponding number of categories.
+> 🔔 For multi-category segmentation, please save each category label as a separate mask for each image and use the above code to make ROI images for it with corresponding number of categories.
 
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
@@ -115,7 +115,7 @@ python llava_inference/get_text.py \
     --dataset-name kvasir \
     --model-path ./llava_inference/llava-v1.5-13b
 ```
-The generated text will be saved to `{dataset_name}_text_out.csv` in the `{dataset_name}` folder under `text_file`.
+> 🔔 The generated text will be saved to `{dataset_name}_text_out.csv` in the `{dataset_name}` folder under `text_file`.
 
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
@@ -129,7 +129,7 @@ conda activate vlsm
 
 python train.py
 ```
-At the end of training, the model is automatically loaded with the best parameters selected based on validation results and evaluated on the test set.
+> 🔔 At the end of training, the model is automatically loaded with the best parameters selected based on validation results and evaluated on the test set.
 
 ## 📝 Notes
 
