@@ -46,6 +46,7 @@ cd LLaVA
 # Install dependencies
 pip install --upgrade pip
 pip install -e .
+pip install monai --no-deps
 ```
 > 🔔 Refer to [pytorch.org](https://pytorch.org/) when installing torch packages.
 
