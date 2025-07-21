@@ -22,7 +22,7 @@
 ## Framework
 
 <p align="center">
-  <img src="images/Figure.jpg" alt="Logo" style="width:80%;">
+  <img src="images/Figure2.tif" alt="Logo" style="width:80%;">
 </p>
 
 ## 🛠️ Installation
