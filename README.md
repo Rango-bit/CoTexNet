@@ -61,6 +61,8 @@ pip install monai --no-deps
 | CLinicDB | [Download](https://polyp.grand-challenge.org/CVCClinicDB/) |GLaS|[Download](https://paperswithcode.com/dataset/glas) |
 | BUSI | [Download](https://scholar.cu.edu.eg/?q=afahmy/pages/dataset) |CAMUS|[Download](https://www.creatis.insa-lyon.fr/Challenge/camus/databases.html) |
 | DDTI | [Download](http://cimalab.unal.edu.co/?lang=en&mod=project&id=31)  |ACDC|[Download](https://www.creatis.insa-lyon.fr/Challenge/acdc/databases.html) |
+| MosMed | [Download](https://medicalsegmentation.com/covid19/) |CHAOS|[Download](https://zenodo.org/records/3431873#.Yl_9itpBxaQ) |
+| QaTa | [Download](https://www.kaggle.com/datasets/aysendegerli/qatacov19-dataset)  | | |
 
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
