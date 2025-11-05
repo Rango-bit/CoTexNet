@@ -12,8 +12,8 @@
   <h2 align="center" style="margin-top: -30px;">Learning conceptual text prompts from visual regions of interest for medical image segmentation</h2>
 </p>
 
-![Version](https://img.shields.io/badge/Version-1.0-lightgrey.svg) 
-![LastUpdated](https://img.shields.io/badge/LastUpdated-2025.03-lightblue.svg)
+![Version](https://img.shields.io/badge/Version-3.0-lightgrey.svg) 
+![LastUpdated](https://img.shields.io/badge/LastUpdated-2025.11-lightblue.svg)
 
 ## 📋 Overview
 
