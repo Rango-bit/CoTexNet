@@ -119,6 +119,7 @@ python llava_inference/get_text.py \
     --model-path ./llava_inference/llava-v1.5-13b
 ```
 > 🔔 The generated text will be saved to `{dataset_name}_text_out.csv` in the `{dataset_name}` folder under `text_file`. We provide the generated text information on the Kvasir dataset in the `text_file\kvasir` folder for reference.
+> 🔔 **Important:** Before training, please perform offline data augmentation on the training dataset — such as horizontal flipping, vertical flipping, and scaling — to increase data diversity. After augmentation, use the LLaVA model to generate corresponding text descriptions for the augmented training images, and use them in the subsequent training to achieve the best segmentation performance of the model.
 
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
