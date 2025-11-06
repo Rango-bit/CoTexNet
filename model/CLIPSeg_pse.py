@@ -94,7 +94,7 @@ class CLIPseg_pse(CLIPSegPreTrainedModel):
         self.post_init()
 
         self.img_projection = img_projection
-        self.weight_alpha = nn.Parameter(torch.FloatTensor([0.8]), requires_grad=True)
+        self.weight_alpha = nn.Parameter(torch.FloatTensor([0.2]), requires_grad=True)
 
         self.sigmoid = nn.Sigmoid()
         self.var = torch.nn.Parameter(torch.FloatTensor(1), requires_grad=True)
@@ -191,7 +191,7 @@ class CLIPseg_pse(CLIPSegPreTrainedModel):
 
         if not use_cls_token: # training phase
             # Noise-added
-            conditional_embeddings = self.weight_alpha * conditional_embeddings + (1-self.weight_alpha) * img_embedding
+            conditional_embeddings = (1-self.weight_alpha) * conditional_embeddings + self.weight_alpha * img_embedding
 
         else: # Testing and validation phase
 
@@ -379,4 +379,5 @@ class CLIPSegPlus(nn.Module):
 
     def forward(self, **kwargs):
         outputs = self.clipseg(**kwargs)
+
         return outputs
