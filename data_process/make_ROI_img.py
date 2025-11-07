@@ -37,6 +37,18 @@ def make_roi_img(args):
         mask = cv2.imread(mask_name_path, cv2.IMREAD_GRAYSCALE)
         mask = cv2.resize(mask, (cols, rows))
 
+        # The mask also requires processing for different datasets,
+        # as some datasets range from 0 to 1 while others range from 0 to 255.
+        if dataset_name in ['QaTa', 'MosMed']:
+            mask[mask <= 0] = 0
+            mask[mask > 0] = 255
+        elif dataset_name in ['kvasir', 'clinicdb', 'busi', 'isic', 'colondb',
+                              'chexlocalize', 'cvc300', 'bkai', 'etis', 'camus', 'dfu']:
+            mask[mask < 128] = 0
+            mask[mask >= 128] = 255
+        else:
+            raise ValueError("Dataset not supported")
+
         roi_img = cover_img(img, mask)
 
         cv2.imwrite(os.path.join(save_path, file_name + '.jpg'), roi_img)
@@ -60,3 +72,4 @@ if __name__ == '__main__':
 
 
     make_roi_img(args)
+
