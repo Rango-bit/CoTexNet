@@ -49,17 +49,14 @@ def make_roi_img(args):
 
 if __name__ == '__main__':
 
-    dataset_and_path = { 'kvasir': './dataset_process/kvasir',}
-    img_formats = {'kvasir': '.jpg'}
-
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset-name", choices=['kvasir', 'clinicdb', 'bkai', 'camus',
-                                                   'busi', 'dfu', 'isic','GLaS', 'DDTI'])
+    parser.add_argument("--dataset-name", default = 'kvasir')
 
     parser.add_argument("--dataset-path", default='./kvasir')
 
     parser.add_argument("--img-format", default='.jpg')
 
     args = parser.parse_args()
+
 
     make_roi_img(args)
