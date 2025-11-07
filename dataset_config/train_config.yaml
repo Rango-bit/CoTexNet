@@ -1,5 +1,5 @@
 MODEL:
-  model_name: 'CLIPSegP'
+  model_name: 'CoTexNet'
   clipseg_hf_api: "CIDAS/clipseg-rd64-refined"
 
 DATASET:
@@ -24,4 +24,5 @@ TRAIN:
   print_freq: 150
   start_epoch: 0
   save_best: True
+
   amp: True
