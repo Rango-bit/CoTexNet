@@ -94,8 +94,8 @@ class DriveDataset(Dataset):
         if dataset_name == 'camus':  # The masks in this dataset have / in their names
             mask_filename = mask_filename.replace('/', '_')
 
-        img_path = os.path.join(self.root_dir, 'images')
-        mask_path = os.path.join(self.root_dir, 'masks')
+        img_path = os.path.join(self.root_dir, self.dataset_name, 'images')
+        mask_path = os.path.join(self.root_dir, self.dataset_name, 'masks')
 
         img = Image.open(os.path.join(img_path, img_filename)).convert('RGB')
         mask = Image.open(os.path.join(mask_path, mask_filename)).convert('L')
@@ -144,5 +144,6 @@ class DriveDataset(Dataset):
             'attention_mask': attention_mask,
             'text_feature_label': text_feature_label
         }
+
 
         return sample
