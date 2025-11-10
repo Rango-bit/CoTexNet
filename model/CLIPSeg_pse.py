@@ -115,8 +115,6 @@ class CLIPseg_pse(CLIPSegPreTrainedModel):
         if len(input_ids) != batch_size:
             raise ValueError("Make sure to pass as many prompt texts as there are query images")
 
-
-        # with torch.no_grad(): # 会禁止梯度计算
         conditional_embeddings = self.clip.get_text_features(
             input_ids, attention_mask=attention_mask, position_ids=position_ids, roi_embedding=roi_embedding
         )
@@ -381,3 +379,4 @@ class CLIPSegPlus(nn.Module):
         outputs = self.clipseg(**kwargs)
 
         return outputs
+
