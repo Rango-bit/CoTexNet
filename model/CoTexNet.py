@@ -83,16 +83,18 @@ class CLIPSeg_fintune(nn.Module):
 
     def forward(self, **kwargs):
 
-        if 'roi_embedding' in kwargs:
-            kwargs['roi_embedding'] = self.im2text(kwargs['roi_embedding'])
+        if 'roi_img' in kwargs:
+            kwargs['roi_embedding'] = self.im2text(kwargs['roi_img'])
         else:
             kwargs['roi_embedding'] = None
-
+        del kwargs['roi_img']
+        
         output = self.clipsegp(**kwargs)
 
         if self.num_classes == 2:
             logits = self.sigmoid(output.logits)
         else:
             logits = self.sigmoid(output.logits)
+
 
         return logits, output.img_embedding, output.conditional_embeddings
