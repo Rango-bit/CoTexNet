@@ -17,7 +17,7 @@
 
 ## 📋 Overview
 
-🌈This repository contains a official implementation implementation of our research paper “Learning conceptual textual prompts from visual regions of interest for medical image segmentation”. Our approach learn conceptual text prompts directly from visual regions of interest (ROIs) to facilitate medical image segmentation. This repository provides the detailed implementation of applying our methods on multiple datasets.
+🌈This repository contains the official implementation implementation of our research paper “Learning conceptual textual prompts from visual regions of interest for medical image segmentation”. Our approach learn conceptual text prompts directly from visual regions of interest (ROIs) to facilitate medical image segmentation. This repository provides the detailed implementation of applying our methods on multiple datasets.
 
 ## Framework
 
