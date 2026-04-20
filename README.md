@@ -148,3 +148,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
 ></a></p>
+
+## 📢 Citation
+If you find our model useful of use our model in your research, please consider citing the following work in your publications.
+```bibtex
+@article{HE2026,
+title = {Learning Conceptual Text Prompts from Visual Regions of Interest for Medical Image Segmentation},
+journal = {Engineering},
+year = {2026},
+issn = {2095-8099},
+doi = {https://doi.org/10.1016/j.eng.2026.04.006},
+url = {https://www.sciencedirect.com/science/article/pii/S2095809926001955},
+author = {Zhu He and Haoran Zhang and Wentao Zhang and Shen Zhao and Qiqi Liu and Xiaohu Wu and Qicheng Lao},
+}
+```
