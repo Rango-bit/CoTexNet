@@ -141,14 +141,6 @@ python train.py
 + In the above "Generate Text", the code defaults to using GPUs 0 and 1 for inference (see the `os.environ['CUDA_VISIBLE_DEVICES']` parameter in `llava_vqa_13.py` for more details). Ensure that the total available GPU memory exceeds 30GB.
 + For the parameter `num_classes` in `dataset_config/train_config.yaml`, `num_classes` should be the number of categories plus one (with the background as a separate category). For example, in the CAMUS dataset (3 classes), `num_classes` is 4.
 
-## 📄 LICENSE
-
-![Static Badge](https://img.shields.io/badge/Code_Lincense-MIT_lincense-green)
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
-></a></p>
-
 ## 📢 Citation
 If you find our model useful of use our model in your research, please consider citing the following work in your publications.
 ```bibtex
@@ -162,3 +154,11 @@ url = {https://www.sciencedirect.com/science/article/pii/S2095809926001955},
 author = {Zhu He and Haoran Zhang and Wentao Zhang and Shen Zhao and Qiqi Liu and Xiaohu Wu and Qicheng Lao},
 }
 ```
+
+## 📄 LICENSE
+
+![Static Badge](https://img.shields.io/badge/Code_Lincense-MIT_lincense-green)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+<p align="right"><a href="#readme-top"><img src=https://img.shields.io/badge/back%20to%20top-red?style=flat
+></a></p>
